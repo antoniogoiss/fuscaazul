@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Fusca Azul - Informações da loja 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <ion-item>
+        <ion-label for="email">E-mail:</ion-label>
+        <ion-input type="text" id="email" name="email" [ngModel]="loja?.email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="senha">Senha:</ion-label>
+        <ion-input type="text" id="senha" name="senha" [ngModel]="loja?.senha" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="nomeGerente">Nome do gerente:</ion-label>
+        <ion-input type="text" id="nomeGerente" name="nomeGerente" [ngModel]="loja?.nomeGerente" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="nomeLoja">Nome da loja:</ion-label>
+        <ion-input type="text" id="nomeLoja" name="nomeLoja" [ngModel]="loja?.nomeLoja" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="cnpjLoja">CNPJ da loja:</ion-label>
+        <ion-input type="text" id="cnpjLoja" name="cnpjLoja" [ngModel]="loja?.cnpjLoja" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="telefone">Telefone:</ion-label>
+        <ion-input type="text" id="telefone" name="telefone" [ngModel]="loja?.telefone" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="endereco">Endereço:</ion-label>
+        <ion-input type="text" id="endereco" name="endereco" [ngModel]="loja?.endereco" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="coordenadas">Coordenadas da loja:</ion-label>
+        <ion-input type="text" id="coordenadas" name="coordenadas" [ngModel]="loja?.coordenadas" required></ion-input>
+      </ion-item>
+        <ion-button  fill="outline" expand="block" type="submit" >
+          Confirmar
+        </ion-button>
+
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Fusca Azul - Nova peça
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-item>
+      <ion-label for="descricao">Descrição da peça:</ion-label>
+      <ion-input type="text" id="descricao" name="descricao" [ngModel]="peca?.descricao" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="tipo">Tipo da peça:</ion-label>
+      <ion-input type="text" id="tipo" name="tipo" [ngModel]="peca?.tipo" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="preco">Preço:</ion-label>
+      <ion-input type="text" id="preco" name="preco" [ngModel]="peca?.preco" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="qtdAtual">Quantidade atual:</ion-label>
+      <ion-input type="text" id="qtdAtual" name="qtdAtual" [ngModel]="peca?.qtdAtual" required></ion-input>
+    </ion-item>
+    <ion-button fill="outline" expand="block" type="submit" [routerLink]="['/pecas']">
+      Adicionar
+    </ion-button>
+  </form>
+  <ion-button fill="outline" expand="block" [routerLink]="['/pecas']">
+    Voltar para a lista
+  </ion-button>
+</ion-content>

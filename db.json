@@ -1,0 +1,18 @@
+{
+  "pecas": [
+    {
+      "id": "RGKPVxS",
+      "descricao": "Macaco",
+      "tipo": "Ferramenta",
+      "preco": "20,00",
+      "qtdAtual": "15"
+    },
+    {
+      "id": "5hMWAQ_",
+      "descricao": "Tinta metálica",
+      "tipo": "Tinta",
+      "preco": "40,00",
+      "qtdAtual": "30"
+    }
+  ]
+}

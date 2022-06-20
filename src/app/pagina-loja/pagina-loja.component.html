@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Fusca Azul - Sua loja
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="ion-padding">
+    <p>
+      Bem-vindo ao perfil de sua loja, insira as peças disponíveis clicando no botão abaixo!
+    </p>
+  </ion-item>
+  <ion-button  [routerLink]="['/nova-peca']" fill="outline" expand="block" >
+    Nova peça
+  </ion-button>
+  <ion-list>
+    <ion-item *ngFor="let peca of pecas">
+      <ion-label [routerLink]="['/peca', peca.id]">
+        <h2>Descrição: {{peca.descricao}}</h2>
+        <h3>Tipo: {{peca.tipo}}</h3>
+        <h3>Preço: {{peca.preco}}</h3>
+        <h3>Quantidade Atual: {{peca.qtdAtual}}</h3>
+      </ion-label>
+     <ion-button fill="outline" onclick="deletaPeca(this.id)">Apagar</ion-button>
+    </ion-item>
+    </ion-list>
+</ion-content>
